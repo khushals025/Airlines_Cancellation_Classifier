@@ -8,7 +8,12 @@
 - [Introduction](#introduction)
 - [Dependencies](#dependencies)
 - [Dataset](#dataset)
+- [ETL Pipeline](#etl-pipeline)
 - [Data Pre-Processing](#data-pre-processing)
+- [Class Imbalance](#class-imbalance)
+- [Classification Models](#classification-models)
+- [Results](#results)
+- [Future Scope](#future-scope)
 
 
 ## 1. Introduction
