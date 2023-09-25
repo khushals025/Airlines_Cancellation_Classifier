@@ -245,7 +245,7 @@ The pipeline initiates by ingesting the raw data in parquet format into Azure DB
 
 
 
-We then employ **two Spark jobs** to enrich the dataset with binary columns, simplifying subsequent analyses. These jobs (Azure Notebooks) were executed on a cluster/ compute deployed inside the Azure Workspace. You can find more information regarding Azure Databricks <a href="https://azure.microsoft.com/en-us/products/databricks#features" 
+We then employ **two Spark jobs** to enrich the dataset with binary columns, simplifying subsequent analyses. These jobs (Azure Notebooks) were executed on a cluster/ compute deployed inside the Azure Workspace. Find more information regarding <a href="https://azure.microsoft.com/en-us/products/databricks#features">Azure-Databricks</a> 
 
 1) **Transformation 1** **: Adding binary columns**
 
