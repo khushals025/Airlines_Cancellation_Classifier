@@ -236,7 +236,9 @@ from sklearn.metrics import roc_curve, roc_auc_score
   </tbody>
 </table>
 
-## 4. ETL Pipeline
+<h2 style="display: flex; align-items: center;">
+   4. ETL Pipeline <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png" alt="Databricks Logo" style="width: 100px; height: 50px; margin-right: 10px;">
+</h2>
 
 Used **Azure Databricks** to build the pipeline, designed to efficiently ingest, process/transform , and prepare the data for Classification task.
 
