@@ -105,7 +105,7 @@ from sklearn.metrics import roc_curve, roc_auc_score
 - #### Dataset : Airline-on-time-performance-data,
 - You can find the dataset <a href="https://www.kaggle.com/datasets/ahmedelsayedrashad/airline-on-time-performance-data/code?datasetId=3670668&sortBy=dateRun&tab=profile">here</a>
 - The data consists of flight arrival and departure details for all commercial flights within the USA, from October 1987 to April 2008. This is a large dataset: there are nearly 120 million records in total and takes up 1.6 gigabytes of space when compressed and 12 gigabytes when uncompressed.
-- In this project we used Data from year 2006,2007 and 2008, which is in parquet format.
+- In this project we used Data from year 2006,2007 and 2008, which is in **parquet format**.
   
 - #### Features: There are 31 attributes shown in the following table
 
@@ -289,6 +289,10 @@ This ETL pipeline effectively prepares the data and generates valuable insights,
 
 
 ## 5. Data Pre-processing
+
+- Loaded Transformed data containing 2 new coulmns namely, **arrival-delay-indicator**, and **departure-delay-indicator**. With **1** as delayed indicator and **0** as not delayed indicator.
+- This dataset was partiotioned into 20 csv files to achieve data parallelism, which is essential for distributing the workload across multiple computing nodes or cores efficiently.
+- In order to use this data it is essential to merge into 1 dataset. 
 
 
 
