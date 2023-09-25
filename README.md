@@ -249,13 +249,20 @@ We then employ **two Spark jobs** to enrich the dataset with binary columns, sim
 
 - **Transformation 1** **: Adding binary columns**
 
-The first Spark job adds binary columns for departure delays (0 or 1) and arrival delays (0 or 1). This transformation makes it easier to categorize flights based on whether they experienced delays or not.
-
+The first Spark job adds binary columns for departure delays (0 or 1) and arrival delays (0 or 1). This transformation makes it easier to categorize flights based on whether they experienced delays or not. Further we partitioned the data into 20 parts. 
 
 ```bash
 # Add new columns for arrival and departure delay indicators
 df = df.withColumn("arrival_delay_indicator", when(col("arrival_delay") > 0, "yes").otherwise("no"))
 df = df.withColumn("departure_delay_indicator", when(col("departure_delay") > 0, "yes").otherwise("no"))
+```
+
+<div align="center">
+  <img src="DAG.png" alt = "Image alt" width="300">
+</div>
+
+```bash
+df = df.repartition(20)
 ```
 
 - **Transformation 2** **: Group by unique carrier and month**
