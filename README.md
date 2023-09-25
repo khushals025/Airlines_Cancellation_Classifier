@@ -362,6 +362,25 @@ This ETL pipeline effectively prepares the data and generates valuable insights,
 <p>While both XGBoost and Bernoulli Naive Bayes have their strengths, Random Forest stands out as the preferred choice for this specific classification task, providing the highest level of accuracy and reliability in making predictions.</p>
 
 
+<h2>Future Scope</h2>
+
+<p>As part of our ongoing efforts to enhance data-driven decision-making, the next phase of this project will involve the creation of a comprehensive visualization dashboard. We plan to leverage powerful data visualization tools such as Power BI and Tableau to craft insightful business reports and interactive dashboards.</p>
+
+<p>The objectives of this future phase include:</p>
+
+<ol>
+  <li><strong>Data Visualization:</strong> Utilizing the rich dataset and insights generated from our classification models, we will create visually engaging and informative charts, graphs, and interactive visualizations to present key performance indicators (KPIs) and trends.</li>
+  
+  <li><strong>Business Insights:</strong> Our visualization dashboard will enable stakeholders to gain quick and actionable insights from the data. It will provide a user-friendly interface for exploring the impact of various factors on flight delays, helping to inform strategic decisions.</li>
+  
+  <li><strong>Customized Reports:</strong> We will design custom reports tailored to the specific needs of different business units and decision-makers. These reports will offer detailed analyses and recommendations based on the classification results and dataset attributes.</li>
+  
+  <li><strong>Real-time Monitoring:</strong> For ongoing operations, we can also implement real-time monitoring features within the dashboard, enabling stakeholders to track flight delays and related metrics as they occur.</li>
+  
+  <li><strong>Interactivity and Accessibility:</strong> The visualization dashboard will be designed for ease of use, allowing users to filter, drill down, and interact with the data. It will also be accessible across multiple devices and platforms.</li>
+</ol>
+
+<p>By harnessing the capabilities of Power BI and Tableau, we anticipate providing a powerful tool for our organization, empowering teams and decision-makers to make informed choices, optimize operations, and enhance overall efficiency.</p>
 
 
 
