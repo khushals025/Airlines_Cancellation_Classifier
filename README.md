@@ -105,7 +105,7 @@ from sklearn.metrics import roc_curve, roc_auc_score
 - #### Dataset : Airline-on-time-performance-data,
 - You can find the dataset <a href="https://www.kaggle.com/datasets/ahmedelsayedrashad/airline-on-time-performance-data/code?datasetId=3670668&sortBy=dateRun&tab=profile">here</a>
 - The data consists of flight arrival and departure details for all commercial flights within the USA, from October 1987 to April 2008. This is a large dataset: there are nearly 120 million records in total and takes up 1.6 gigabytes of space when compressed and 12 gigabytes when uncompressed.
-
+- In this project we used Data from year 2006,2007 and 2008, which is in parquet format.
   
 - #### Features: There are 31 attributes shown in the following table
 
@@ -236,6 +236,56 @@ from sklearn.metrics import roc_curve, roc_auc_score
   </tbody>
 </table>
 
-## 4. Data Pre-processing
+## 4. ETL Pipeline
+
+Used **Azure Databricks** to build the pipeline, designed to efficiently ingest, process/transform , and prepare the data for Classification task.
+
+**Data Ingestion:**
+The pipeline initiates by ingesting the raw data in parquet format into Azure DBFS through the Command Line Interface (CLI). This data forms the foundation of our analysis and includes crucial information about flights, such as departure times, arrival times, delays, unique carriers, and more.
+
+
+
+We then employ **two Spark jobs** to enrich the dataset with binary columns, simplifying subsequent analyses. These jobs (Azure Notebooks) were executed on a cluster/ compute deployed inside the Azure Workspace. You can find more information regarding Azure Databricks <a href="https://azure.microsoft.com/en-us/products/databricks#features" 
+
+1) **Transformation 1** **: Adding binary columns**
+
+The first Spark job adds binary columns for departure delays (0 or 1) and arrival delays (0 or 1). This transformation makes it easier to categorize flights based on whether they experienced delays or not.
+
+
+```bash
+# Add new columns for arrival and departure delay indicators
+df = df.withColumn("arrival_delay_indicator", when(col("arrival_delay") > 0, "yes").otherwise("no"))
+df = df.withColumn("departure_delay_indicator", when(col("departure_delay") > 0, "yes").otherwise("no"))
+```
+
+2) **Transformation 2** **: Group by unique carrier and month**
+
+Second Spark job is to find insights to answer questions such as, when is the best time of day/day of week/time of year to fly to minimise delays? and which carrier causes the most delays?
+
+   ```scala
+   // SQL query to aggregate delays per unique carrier
+   SELECT unique_carrier,
+          SUM(CASE WHEN arrival_delay > 0 THEN 1 ELSE 0 END) AS arrival_delays,
+          SUM(CASE WHEN departure_delay > 0 THEN 1 ELSE 0 END) AS departure_delays
+   FROM flight_data
+   GROUP BY unique_carrier
+   ORDER BY unique_carrier
+   ```
+
+   ```scala
+   // SQL query to aggregate delays per month
+   SELECT month,
+          SUM(CASE WHEN arrival_delay > 0 THEN 1 ELSE 0 END) AS arrival_delays,
+          SUM(CASE WHEN departure_delay > 0 THEN 1 ELSE 0 END) AS departure_delays
+   FROM flight_data
+   GROUP BY month
+   ORDER BY month
+   ```
+
+**Data Export and Classification:**
+After transforming and summarizing the data, it is loaded back into Azure DBFS. From this point, you can proceed with classification tasks using machine learning models like XGBoost, Random Forest, or Bernoulli Naive Bayes to predict flight delays or other related outcomes.
+
+This ETL pipeline effectively prepares the data and generates valuable insights, enabling data-driven decision-making in the airline industry. The combination of Azure DBFS and Apache Spark provides a scalable and efficient environment for handling and analyzing large datasets.
+
 
 
