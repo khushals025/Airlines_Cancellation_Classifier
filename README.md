@@ -102,12 +102,139 @@ from sklearn.metrics import roc_curve, roc_auc_score
 
 ## 3. Dataset
 
-- The data consists of flight arrival and departure details for all commercial flights within the USA, from October 1987 to April 2008. This is a large dataset: there are nearly 120 million records in total and takes up 1.6 gigabytes of space when compressed and 12 gigabytes when uncompressed.
-- Data was extracted using Kaggle's API 
+- #### Dataset : Airline-on-time-performance-data,
 - You can find the dataset <a href="https://www.kaggle.com/datasets/ahmedelsayedrashad/airline-on-time-performance-data/code?datasetId=3670668&sortBy=dateRun&tab=profile">here</a>
+- The data consists of flight arrival and departure details for all commercial flights within the USA, from October 1987 to April 2008. This is a large dataset: there are nearly 120 million records in total and takes up 1.6 gigabytes of space when compressed and 12 gigabytes when uncompressed.
 
+  
+- #### Features: There are 31 attributes shown in the following table
 
-[Link to Kaggle Project](https://www.kaggle.com/your-kaggle-username/your-project-name) 
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>year</td>
+      <td>1987-2008</td>
+    </tr>
+    <tr>
+      <td>month</td>
+      <td>1-12</td>
+    </tr>
+    <tr>
+      <td>day of month</td>
+      <td>1-31</td>
+    </tr>
+    <tr>
+      <td>day of week</td>
+      <td>1 (Monday) - 7 (Sunday)</td>
+    </tr>
+    <tr>
+      <td>DepTime</td>
+      <td>actual departure time (minutes)</td>
+    </tr>
+    <tr>
+      <td>CRSDepTime</td>
+      <td>scheduled departure time (minutes)</td>
+    </tr>
+    <tr>
+      <td>ArrTime</td>
+      <td>actual arrival time (minutes)</td>
+    </tr>
+    <tr>
+      <td>CRSArrTime</td>
+      <td>scheduled arrival time (minutes)</td>
+    </tr>
+    <tr>
+      <td>UniqueCarrier</td>
+      <td>unique carrier code</td>
+    </tr>
+    <tr>
+      <td>FlightNum</td>
+      <td>flight number</td>
+    </tr>
+    <tr>
+      <td>TailNum</td>
+      <td>plane tail number</td>
+    </tr>
+    <tr>
+      <td>ActualElapsedTime</td>
+      <td>in minutes</td>
+    </tr>
+    <tr>
+      <td>CRSElapsedTime</td>
+      <td>in minutes</td>
+    </tr>
+    <tr>
+      <td>AirTime</td>
+      <td>in minutes</td>
+    </tr>
+    <tr>
+      <td>ArrDelay</td>
+      <td>arrival delay, in minutes</td>
+    </tr>
+    <tr>
+      <td>DepDelay</td>
+      <td>departure delay, in minutes</td>
+    </tr>
+    <tr>
+      <td>Origin</td>
+      <td>origin IATA airport code</td>
+    </tr>
+    <tr>
+      <td>Dest</td>
+      <td>destination IATA airport code</td>
+    </tr>
+    <tr>
+      <td>Distance</td>
+      <td>in miles</td>
+    </tr>
+    <tr>
+      <td>TaxiIn</td>
+      <td>taxi in time, in minutes</td>
+    </tr>
+    <tr>
+      <td>TaxiOut</td>
+      <td>taxi out time in minutes</td>
+    </tr>
+    <tr>
+      <td>Cancelled</td>
+      <td>was the flight cancelled?</td>
+    </tr>
+    <tr>
+      <td>CancellationCode</td>
+      <td>reason for cancellation (A = carrier, B = weather, C = NAS, D = security)</td>
+    </tr>
+    <tr>
+      <td>Diverted</td>
+      <td>1 = yes, 0 = no</td>
+    </tr>
+    <tr>
+      <td>CarrierDelay</td>
+      <td>in minutes</td>
+    </tr>
+    <tr>
+      <td>WeatherDelay</td>
+      <td>in minutes</td>
+    </tr>
+    <tr>
+      <td>NASDelay</td>
+      <td>in minutes</td>
+    </tr>
+    <tr>
+      <td>SecurityDelay</td>
+      <td>in minutes</td>
+    </tr>
+    <tr>
+      <td>LateAircraftDelay</td>
+      <td>in minutes</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 4. Data Pre-processing
 
