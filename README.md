@@ -285,14 +285,36 @@ Second Spark job is to find insights to answer questions such as, when is the be
 **Data Export and Classification:**
 After transforming and summarizing the data, it is loaded back into Azure DBFS. From this point, you can proceed with classification tasks using machine learning models like XGBoost, Random Forest, or Bernoulli Naive Bayes to predict flight delays or other related outcomes.
 
-This ETL pipeline effectively prepares the data and generates valuable insights, enabling data-driven decision-making in the airline industry. The combination of Azure DBFS and Apache Spark provides a scalable and efficient environment for handling and analyzing large datasets.
+This ETL pipeline effectively prepares the data and generates valuable insights, enabling data-driven decision-making in the airline industry. The combination of Azure DBFS and **Apache Spark** provides a scalable and efficient environment for handling and analyzing large datasets.
 
 
-## 5. Data Pre-processing
 
-- Loaded Transformed data containing 2 new coulmns namely, **arrival-delay-indicator**, and **departure-delay-indicator**. With **1** as delayed indicator and **0** as not delayed indicator.
-- This dataset was partiotioned into 20 csv files to achieve data parallelism, which is essential for distributing the workload across multiple computing nodes or cores efficiently.
-- In order to use this data it is essential to merge into 1 dataset. 
+<h2> 5. Data Preprocessing</h2>
+
+<p>As part of the data preprocessing phase, several important steps were undertaken to ensure the data was ready for analysis:</p>
+
+<ol>
+  <li><strong>Data Transformation:</strong> The raw data was transformed to include two new columns, namely <em>arrival-delay-indicator</em> and <em>departure-delay-indicator</em>, with '1' indicating a delay and '0' indicating no delay.</li>
+  
+  <li><strong>Data Partitioning:</strong> To achieve efficient data parallelism, the transformed dataset was partitioned into 20 CSV files. This partitioning allowed for the distribution of workload across multiple computing nodes and cores.</li>
+  
+  <li><strong>Merging Data:</strong> To facilitate further analysis, the partitioned data was merged into a single dataset, ensuring consolidated and accessible information.</li>
+  
+  <li><strong>Data Cleaning:</strong> Rows containing NaN values were removed, and unnecessary features were dropped from the dataset to enhance data quality.</li>
+  
+  <li><strong>Handling Class Imbalance:</strong> The dataset exhibited a significant class imbalance with Class 0 being the majority class and Class 1 as the minority class, resulting in a class imbalance ratio of approximately 49.01:1.</li>
+</ol>
+
+<p>To address the class imbalance problem, the Synthetic Minority Over-sampling Technique (SMOTE) algorithm was employed.</p>
+
+<h3>About SMOTE Algorithm</h3>
+
+<p>SMOTE, or Synthetic Minority Over-sampling Technique, is a resampling technique designed to address class imbalance in datasets. It works by generating synthetic examples for the minority class to balance the class distribution. This involves creating new instances that are combinations of existing minority class instances.</p>
+
+<p>SMOTE helps prevent model bias towards the majority class and improves the predictive performance of machine learning models. It achieves this by increasing the representation of the minority class, thus ensuring that the model has sufficient examples to learn from for both classes.</p>
+
+<p>By employing SMOTE, we aimed to create a more balanced and representative dataset, ultimately enhancing the accuracy and fairness of our machine learning models.</p>
+
 
 
 
