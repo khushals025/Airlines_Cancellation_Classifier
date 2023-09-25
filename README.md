@@ -322,6 +322,11 @@ This ETL pipeline effectively prepares the data and generates valuable insights,
 
 <p>By employing SMOTE, we aimed to create a more balanced and representative dataset, ultimately enhancing the accuracy and fairness of our machine learning models.</p>
 
+<h3>Before and After SMOTE Visualization</h3>
+
+<div aligh="center">
+  <img src="SMOTE.png" alt = "Image Alt" width = "500">
+</div>
 
 
 
