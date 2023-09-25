@@ -324,9 +324,14 @@ This ETL pipeline effectively prepares the data and generates valuable insights,
 
 <h3>Before and After SMOTE Visualization</h3>
 
-<div aligh="center">
-  <img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/SMOTE.png?raw=true" alt = "Image Alt" width = "500">
+
+<div align="center">
+  <img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/SMOTE.png?raw=true" alt = "Image Alt" width = "700">
 </div>
+
+
+
+
 
 
 
