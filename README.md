@@ -288,4 +288,8 @@ After transforming and summarizing the data, it is loaded back into Azure DBFS. 
 This ETL pipeline effectively prepares the data and generates valuable insights, enabling data-driven decision-making in the airline industry. The combination of Azure DBFS and Apache Spark provides a scalable and efficient environment for handling and analyzing large datasets.
 
 
+## 5. Data Pre-processing
+
+
+
 
