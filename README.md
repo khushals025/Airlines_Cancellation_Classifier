@@ -247,7 +247,7 @@ The pipeline initiates by ingesting the raw data in parquet format into Azure DB
 
 We then employ **two Spark jobs** to enrich the dataset with binary columns, simplifying subsequent analyses. These jobs (Azure Notebooks) were executed on a cluster/ compute deployed inside the Azure Workspace. Find more information regarding <a href="https://azure.microsoft.com/en-us/products/databricks#features">Azure-Databricks</a> 
 
-1) **Transformation 1** **: Adding binary columns**
+- **Transformation 1** **: Adding binary columns**
 
 The first Spark job adds binary columns for departure delays (0 or 1) and arrival delays (0 or 1). This transformation makes it easier to categorize flights based on whether they experienced delays or not.
 
@@ -258,7 +258,7 @@ df = df.withColumn("arrival_delay_indicator", when(col("arrival_delay") > 0, "ye
 df = df.withColumn("departure_delay_indicator", when(col("departure_delay") > 0, "yes").otherwise("no"))
 ```
 
-2) **Transformation 2** **: Group by unique carrier and month**
+- **Transformation 2** **: Group by unique carrier and month**
 
 Second Spark job is to find insights to answer questions such as, when is the best time of day/day of week/time of year to fly to minimise delays? and which carrier causes the most delays?
 
