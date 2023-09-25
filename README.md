@@ -336,18 +336,21 @@ This ETL pipeline effectively prepares the data and generates valuable insights,
 <p>Trained three classification models to compare and evaluate the best model for this dataset choice.</p>
 
 <ul>
-  <li><strong>XGBoost</strong></li>
-  <p>XGBoost is a powerful machine learning algorithm known for its efficiency and performance. It belongs to the ensemble learning category, which means it combines the predictions of multiple machine learning models (typically decision trees) to improve accuracy and reduce overfitting. XGBoost is widely used in various data science and classification tasks due to its ability to handle complex datasets and deliver competitive results.</p>
-
-<div align="center">
-  <img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/XGB_2.png?raw=true" alt = "IMg" width="400">
-</div>
-
   <li><strong>Bernoulli Naive Bayes</strong></li>
   <p>Bernoulli Naive Bayes (BNB) is a probabilistic classifier based on the Naive Bayes theorem. It is particularly suited for binary classification tasks where the features are binary (0 or 1). BNB assumes that features are conditionally independent given the class label, making it a simple yet effective algorithm for text classification and other binary classification problems.</p>
 
+<p align="left"><img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/BNB_CM.png?raw=true" alt="classification models" width="450"/>&nbsp;&nbsp;<img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/BNB.png?raw=true" alt="aws" width="450" /> 
+
+<li><strong>XGBoost</strong></li>
+  <p>XGBoost is a powerful machine learning algorithm known for its efficiency and performance. It belongs to the ensemble learning category, which means it combines the predictions of multiple machine learning models (typically decision trees) to improve accuracy and reduce overfitting. XGBoost is widely used in various data science and classification tasks due to its ability to handle complex datasets and deliver competitive results.</p>
+
+<p align="left"><img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/XGB_2_CM.png?raw=true" alt="classification models" width="450"/>&nbsp;&nbsp;<img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/XGB_2.png?raw=true" alt="aws" width="450" /> 
+
   <li><strong>Random Forest</strong></li>
   <p>Random Forest is another ensemble learning method that leverages multiple decision trees to make predictions. Each decision tree in the forest is trained on a different subset of the data and features, reducing overfitting and improving generalization. Random Forest is known for its robustness, scalability, and ability to handle high-dimensional data, making it a popular choice for classification tasks.</p>
+
+<p align="left"><img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/RF_CM.png?raw=true" alt="classification models" width="450"/>&nbsp;&nbsp;<img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/RF.png?raw=true" alt="aws" width="450" /> 
+  
 </ul>
 
 
