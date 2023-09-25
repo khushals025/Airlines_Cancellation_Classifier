@@ -309,7 +309,7 @@ This ETL pipeline effectively prepares the data and generates valuable insights,
   
   <li><strong>Data Cleaning:</strong> Rows containing NaN values were removed, and unnecessary features were dropped from the dataset to enhance data quality.</li>
   
-  <li><strong>Handling Class Imbalance:</strong> The dataset exhibited a significant class imbalance with Class 0 being the majority class and Class 1 as the minority class, resulting in a class imbalance ratio of approximately 49.01:1.</li>
+  <li><strong>Handling Class Imbalance:</strong> The dataset exhibited a significant class imbalance with Class 0 being the majority class and Class 1 as the minority class, resulting in a class imbalance ratio of approximately 49:1.</li>
 </ol>
 
 <p>To address the class imbalance problem, the Synthetic Minority Over-sampling Technique (SMOTE) algorithm was employed.</p>
