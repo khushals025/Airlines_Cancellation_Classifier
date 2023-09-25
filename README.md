@@ -331,7 +331,7 @@ This ETL pipeline effectively prepares the data and generates valuable insights,
   <img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/SMOTE.png?raw=true" alt = "Image Alt" width = "700">
 </div>
 
-<h3>Classification</h3>
+<h3>Classification Models and Comparing Results</h3>
 
 <p>Trained three classification models to compare and evaluate the best model for this dataset choice.</p>
 
@@ -352,6 +352,14 @@ This ETL pipeline effectively prepares the data and generates valuable insights,
 <p align="left"><img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/RF_CM.png?raw=true" alt="classification models" width="450"/>&nbsp;&nbsp;<img src="https://github.com/khushals025/Airlines_Cancellation_Classifier/blob/main/images/RF.png?raw=true" alt="aws" width="450" /> 
   
 </ul>
+
+<h2>Results</h2>
+
+<p>After thorough evaluation and comparison of the three classification models, it is evident that the Random Forest model consistently outperforms both XGBoost and Bernoulli Naive Bayes in terms of accuracy and predictive power for this dataset.</p>
+
+<p>Random Forest, as an ensemble learning method, demonstrates remarkable robustness and scalability, allowing it to handle the intricacies of this dataset effectively. It excels in capturing complex relationships and patterns within the data, resulting in superior classification performance.</p>
+
+<p>While both XGBoost and Bernoulli Naive Bayes have their strengths, Random Forest stands out as the preferred choice for this specific classification task, providing the highest level of accuracy and reliability in making predictions.</p>
 
 
 
